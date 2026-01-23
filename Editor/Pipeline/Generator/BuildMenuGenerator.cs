@@ -56,7 +56,7 @@
             var name = config.ItemName.RemoveSpecialAndDotsCharacters();
             var id = config.GetGUID();
             var menuMethodName = string.Format(menuTemplate,name);
-            var method = $"{string.Format(template,name)} public static void {menuMethodName}() => UniBuildTool.{buildMethod}(\"{id}\");";
+            var method = $"{string.Format(template,name)} public static void {menuMethodName}() => UniBuildPipelineTool.{buildMethod}(\"{id}\");";
              return method;
         }
     }
